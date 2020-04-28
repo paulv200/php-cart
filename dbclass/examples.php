@@ -2,7 +2,7 @@
 
 //This uses the tables as created by the testing.sql script
 
-$recid = 3;				//Example recid
+$recid = 3;			//Example recid
 $publish = true;		//Example value for publish field
 
 //Set the debug and logging flag

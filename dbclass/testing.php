@@ -93,22 +93,20 @@ echo("Last inserted id: " . $lastinsertedid);
 echo("<br/>--------------------------------<br/>");
 
 ## Update Statement
-$recid = 3;
 $item_name = "Apples";
 $sql = "UPDATE tblitems SET item_name = :item_name WHERE recid = :recid";
 $params = array( 
 	'0' => array ("item_name" => $item_name, "type" => PDO::PARAM_STR), 
-	'1' => array ("recid" => $recid, "type" => PDO::PARAM_INT)
+	'1' => array ("recid" => $lastinsertedid, "type" => PDO::PARAM_INT)
 	);
 $update	= $db->query( $sql, $params );
 echo($update);	//the number of rows affected
 echo("<br/>--------------------------------<br/>");
 
 ## Delete statement
-$recid = 4;
 $sql = " DELETE FROM tblitems WHERE recid = :recid ";
 $params = array( 
-	'0' => array ("recid" => $recid, "type" => PDO::PARAM_INT), 
+	'0' => array ("recid" => $lastinsertedid, "type" => PDO::PARAM_INT), 
 	);
 $delete	 =  $db->query( $sql, $params ); 
 echo($delete);	//the number of rows affected

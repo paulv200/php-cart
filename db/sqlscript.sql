@@ -118,7 +118,7 @@ CREATE TABLE ipn_tblsetup (
 INSERT INTO ipn_tblsetup (recid, paypaladdress, 
                                 sandbox_seller, sitetitle, metadescription, cancel_url, return_url, notify_url, notify_sandbox_url) 
                             VALUES 
-                            ('1', 'paulvgibbs@gmail.com', 
+                            ('1', 'yourpaypaladdress@somewhere.com', 
                                 NULL, NULL ,NULL, NULL, NULL, NULL, NULL);
 
 

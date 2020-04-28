@@ -2,10 +2,16 @@
 
 This is a simple PHP db pdo class which also logs errors.  It is able to do SELECT, UPDATE, INSERT and DELETE statements with parameters entered into an arrray.
 
+https://github.com/paulv200/dbpdoclass
+
+Version 1.0.0
+
+2020-04- 13
+
 
 ## Database configuration file.
 
-You will require a config.php file in the same folder as the Dbpdo.class.php file.
+The config.php file must be located in the same folder as the Dbpdo.class.php file.  It is where the database connection details are located.
 
 	$dbhost 	= "localhost";				//usually localhost
 
@@ -20,7 +26,7 @@ You will require a config.php file in the same folder as the Dbpdo.class.php fil
 
 Dbpdo.class.php is the database class itself.
 
-Log.class.php is the class for error logging.
+Log.class.php is the class for error logging.  This is turned on using $db->setlogging(true);
 
 config.php is where you place your database configuration details.
 
@@ -34,15 +40,18 @@ logs folder is the location of any error logs that may be generated
 
 
 ## Basic use
-	$recid = 3;
 
-	$publish = true;
+This is an example of a select query against a table called tblitems.
 
-	require_once("config.php");
+	$recid = 3;		//example value
 
-	require_once("Dbpdo.class.php");
+	$publish = true;	//example value
 
-	$db = new Db();
+	require_once("config.php");		//You muse include this file 
+
+	require_once("Dbpdo.class.php");	//You muse include this file 
+
+	$db = new Db();			//Creates the instance
 
 	//$db->setdebug(true);		//Use this to display some debug infomation
 
@@ -68,7 +77,8 @@ logs folder is the location of any error logs that may be generated
 
 
 ## params array
-The $params array consists of the parmater name and an optional data type for that parameter.  So in the above example we have recid which is an INT type and a publish flag which is a boolean type.
+
+The $params array consists of the parmater name and an optional data type for that parameter.  So in the above example we have recid which is an INT type and a publish flag which is a boolean type. Notice that the $params array is actually and array of an array.
 
 Some further examples of parameter arrays:
 
@@ -115,6 +125,7 @@ If you want to use another fetchmode just give it as a parameter.  So in the abo
 
 
 ## Fetch values
+
 	$recid = 3;
 
 	$sql = "SELECT item_name FROM tblitems WHERE recid = :recid";
@@ -147,6 +158,7 @@ If you want to use another fetchmode just give it as a parameter.  So in the abo
 
 
 ## Fetch a Single Row
+
 	$recid = 3;
 
 	$sql = "SELECT item_name, item_number FROM tblitems WHERE recid = :recid";
@@ -163,6 +175,7 @@ If you want to use another fetchmode just give it as a parameter.  So in the abo
 
 
 ## Fetch a column	
+
 	$sql = "SELECT item_name FROM tblitems";
 
 	$items = $db->column($sql);
@@ -171,6 +184,7 @@ If you want to use another fetchmode just give it as a parameter.  So in the abo
 
 
 ## Insert Statement
+
 	$item_number = "Fruit";
 
 	$mc_gross = "2.27";
@@ -191,6 +205,7 @@ If you want to use another fetchmode just give it as a parameter.  So in the abo
 
 
 ## Update Statement
+
 	$recid = 3;
 
 	$item_name = "Apples";
@@ -209,6 +224,7 @@ If you want to use another fetchmode just give it as a parameter.  So in the abo
 
 
 ## Delete statement
+
 	$recid = 4;
 
 	$sql = " DELETE FROM tblitems WHERE recid = :recid ";

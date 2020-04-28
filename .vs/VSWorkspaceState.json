@@ -1,8 +1,12 @@
 {
   "ExpandedNodes": [
     "",
+    "\\db",
+    "\\dbclass",
+    "\\includes",
+    "\\ipn",
     "\\ipn\\includes"
   ],
-  "SelectedNode": "\\dbclass",
+  "SelectedNode": "\\dbclass\\config.php",
   "PreviewInSolutionExplorer": false
 }

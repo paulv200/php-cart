@@ -32,5 +32,9 @@ Version 1.0.0
 
 * Upload all the files to a WebServer and display the index.php page in a browser.
 
+* In ipn_tblsetup update the field paypaladdress to your PayPal email address.
 
+## The error.php include file
+
+The include file error.php is included in all scripts and defines the error_reporting level.  Set the error_reporting level for develpment or destribution.
 
