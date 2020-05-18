@@ -1,12 +1,8 @@
 {
   "ExpandedNodes": [
     "",
-    "\\db",
-    "\\dbclass",
-    "\\includes",
-    "\\ipn",
-    "\\ipn\\includes"
+    "\\includes"
   ],
-  "SelectedNode": "\\dbclass\\config.php",
+  "SelectedNode": "\\viewcart.php",
   "PreviewInSolutionExplorer": false
 }

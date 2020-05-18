@@ -82,13 +82,24 @@ The $params array consists of the parmater name and an optional data type for th
 
 Some further examples of parameter arrays:
 
-The following shows string entries with an optional length field.
+The following shows string entries with optional type and length fields.
 
 	$params = array( 
 
-		'0' => 	array ("item_name" => $item_name, "type" => PDO::PARAM_STR, 100),
+		'0' => 	array ("item_name" => $item_name, "type" => PDO::PARAM_STR, "length" => 100),
 
-		'1' => 	array ("item_number" => $item_number, "type" => PDO::PARAM_STR, 20)
+		'1' => 	array ("item_number" => $item_number, "type" => PDO::PARAM_STR, "length" => 20)
+
+		);
+
+
+The following shows string entries with optional type field.
+
+	$params = array( 
+
+		'0' => 	array ("item_name" => $item_name, "type" => PDO::PARAM_STR),
+
+		'1' => 	array ("item_number" => $item_number, "type" => PDO::PARAM_STR)
 
 		);
 

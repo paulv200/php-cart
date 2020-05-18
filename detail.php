@@ -55,13 +55,13 @@ require_once("includes/menu.php");
 			</div>			
 
 			<div class="row">
-				<div class="col-sm-2">&nbsp;</div>
-            	<div class="col-md-6"><img src="assets/960_4.jpg" alt="Shopping cart image" class="img-fluid" /></div>
-				<div class="col-sm-4">&nbsp;</div>
+				<div class="col-md-2">&nbsp;</div>
+            	<div class="col-md-6"><img src="assets/shopping_cart.png" alt="Shopping cart image" class="img-fluid" /></div>
+				<div class="col-md-4">&nbsp;</div>
 			</div>
 			<div class="row">
-				<div class="col-sm-2">&nbsp;</div>
-				<div class="col-md-8"><hr></div>	
+				<div class="col-md-2">&nbsp;</div>
+				<div class="col-md-10"><hr></div>	
 			</div>
 
 				<div class="row">
@@ -70,9 +70,9 @@ require_once("includes/menu.php");
 					foreach( $productdetails as $d_row ) {	
 					?>
 				      
-						<div class="col-sm-2">&nbsp;</div>
+						<div class="col-md-2">&nbsp;</div>
   					
-   						<div class="col-sm-6">
+   						<div class="col-md-6">
    					
    							<h2><?php echo( $d_row["item_title"] ); ?></h2>
    					
@@ -110,7 +110,7 @@ require_once("includes/menu.php");
 							
 						</div>
 					
-    					<div class="col-sm-4">
+    					<div class="col-md-4">
     					
 							<h4>Most Popular</h4>
    					

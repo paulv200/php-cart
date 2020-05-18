@@ -80,7 +80,7 @@ require_once("includes/menu.php");
 
           <div class="row">
                 <div class="col-md-12">
-                  <img src="assets/960_4.jpg" alt="Shopping cart image" class="img-fluid" />
+                  <img src="assets/shopping_cart.png" alt="Shopping cart image" class="img-fluid" />
                 </div>
           </div>
 
